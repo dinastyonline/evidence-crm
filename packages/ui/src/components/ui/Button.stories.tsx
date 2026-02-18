@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import type React from 'react';
 import { Button, type ButtonProps } from './button';
 
 const meta = {
   title: 'UI/Button',
-  component: Button as any,
+  component: Button as unknown as Meta<ButtonProps>['component'],
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

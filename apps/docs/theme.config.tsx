@@ -1,5 +1,4 @@
 import type { DocsThemeConfig } from 'nextra-theme-docs';
-import React from 'react';
 
 const config: DocsThemeConfig = {
   logo: <span>Next.js, Nextra, shadcn/ui Turborepo starter template</span>,

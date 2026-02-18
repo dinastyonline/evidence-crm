@@ -7,7 +7,7 @@
     "start": "next start",
     "dev": "next dev -p 4001",
     "lint": "biome check .",
-    "lint:fix": "biome check . --apply",
+    "lint:fix": "biome check . --write",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {
@@ -21,7 +21,7 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "2.4.2",
     "@repo/tsconfig": "workspace:*",
     "@types/node": "20.14.15",
     "@types/react": "18.3.13",

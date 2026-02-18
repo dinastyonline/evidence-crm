@@ -1,9 +1,7 @@
-
-
 import path from 'node:path';
 import react from '@vitejs/plugin-react';
-import { defineConfig as testConfig } from "vitest/config";
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
+import { defineConfig as testConfig } from 'vitest/config';
 
 // Vite configuration
 const config = defineConfig({
