@@ -1,0 +1,17 @@
+{
+  "name": "@repo/types",
+  "version": "1.0.0",
+  "keywords": [],
+  "license": "ISC",
+  "description": "",
+  "scripts": {
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

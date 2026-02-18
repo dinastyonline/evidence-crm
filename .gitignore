@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -11,14 +11,23 @@
 !.yarn/versions
 
 # testing
-/coverage
+**/tests/unit/coverage
+**/tests/e2e/coverage
+.last-run.json
+
+# storybook
+storybook-static/
+debug-storybook.log
 
 # next.js
-/.next/
-/out/
+.next/
+out/
+next-env.d.ts
 
 # production
-/build
+build
+dist
+dist-ssr
 
 # misc
 .DS_Store
@@ -30,8 +39,10 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# local env files
+# do not commit any .env files to git, except for the .env.example file. https://create.t3.gg/en/usage/env-variables#using-environment-variables
+.env
+.env*.local
 
 # vercel
 .vercel
@@ -39,3 +50,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.turbo
+.cache
+todos.md
+task.md
+temp

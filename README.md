@@ -12,7 +12,7 @@ Evidence CRM helps startups and product teams conduct better customer discovery 
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Next.js 14+ (App Router)
+- **Frontend**: Next.js 16+ (App Router)
 - **Database**: PostgreSQL
 - **Styling**: Tailwind CSS
 - **Language**: TypeScript
@@ -46,7 +46,7 @@ npm install
 cp .env.example .env.local
 
 # Start PostgreSQL (via Docker)
-docker compose up postgres -d
+docker compose up db -d
 
 # Run development server
 npm run dev
