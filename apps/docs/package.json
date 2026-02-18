@@ -8,6 +8,7 @@
     "dev": "next dev -p 4001",
     "lint": "biome check .",
     "lint:fix": "biome check . --write",
+    "check-types": "tsc --noEmit",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {

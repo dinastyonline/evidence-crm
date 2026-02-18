@@ -34,6 +34,10 @@
     "lint": {
       "cache": false
     },
+    "check-types": {
+      "dependsOn": ["^check-types"],
+      "outputs": []
+    },
     "lint:fix": {
       "cache": false
     },

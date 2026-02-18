@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "biome check .",
     "lint:fix": "biome check . --write",
+    "check-types": "tsc --noEmit",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
     "test": "vitest",
     "test:e2e": "playwright test",
