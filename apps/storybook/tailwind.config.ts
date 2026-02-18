@@ -1,14 +1,15 @@
-import path from 'node:path';
-import uiConfig from '@repo/ui/tailwind.config';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  ...uiConfig,
   content: [
-    ...uiConfig.content,
-    path.join(__dirname, '**/*.{js,ts,jsx,tsx,mdx}'),
-    path.join(__dirname, '.storybook/**/*.{js,ts,jsx,tsx,mdx}'),
+    './**/*.{js,ts,jsx,tsx,mdx}',
+    './.storybook/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+  darkMode: 'class',
 };
 
 export default config;

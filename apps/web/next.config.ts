@@ -1,11 +1,10 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
-import type { NextConfig } from 'next';
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   output: 'standalone',
   transpilePackages: ['@repo/ui'],
   reactStrictMode: true,
@@ -17,6 +16,6 @@ const nextConfig: NextConfig = {
       },
     },
   },
-};
+} satisfies Parameters<typeof withBundleAnalyzer>[0];
 
 export default withBundleAnalyzer(nextConfig);
