@@ -1,0 +1,11 @@
+{
+  "extends": "@repo/tsconfig/utils.json",
+  "compilerOptions": {
+    "verbatimModuleSyntax": false,
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"]
+}

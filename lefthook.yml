@@ -1,0 +1,16 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: check js
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+      run: bunx biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      stage_fixed: true
+    - name: check toml
+      glob: "*.{md,mdx}"
+      run: bunx taplo format {staged_files}
+      stage_fixed: true
+
+pre-push:
+  jobs:
+    - name: check types
+      run: bun run check-types

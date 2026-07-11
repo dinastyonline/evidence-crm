@@ -1,0 +1,35 @@
+{
+  "name": "@repo/docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "start": "next start",
+    "dev": "next dev -p 4001",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --write",
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "next": "16.1.6",
+    "nextra": "3.0.15",
+    "nextra-theme-blog": "3.0.15",
+    "nextra-theme-docs": "3.0.15",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.2",
+    "@repo/tsconfig": "workspace:*",
+    "@types/node": "20.14.15",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "5.5.4",
+    "autoprefixer": "10.4.24",
+    "postcss": "8.4.49",
+    "tailwindcss": "3.4.19"
+  }
+}

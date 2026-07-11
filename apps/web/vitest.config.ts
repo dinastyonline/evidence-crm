@@ -1,0 +1,32 @@
+import path from 'node:path';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
+import { defineConfig as testConfig } from 'vitest/config';
+
+// Vite configuration
+const config = defineConfig({
+  plugins: [react()],
+});
+
+// Vitest configuration
+const tstConfig = testConfig({
+  test: {
+    include: ['./tests/unit{,/**}/*.{test,spec}.{ts,tsx}'],
+    coverage: {
+      reportsDirectory: './tests/unit/coverage',
+    },
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: ['./src/test/setup.ts'],
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      '@ui': path.resolve(__dirname, '../../packages/ui/src'),
+    },
+  },
+});
+
+// Merge configurations
+export default {
+  ...config,
+  ...tstConfig,
+};
